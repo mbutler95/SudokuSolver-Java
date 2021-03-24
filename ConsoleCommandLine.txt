@@ -1,0 +1,2 @@
+javac SudokuSolverLib/SudokuSolver.java
+-jar cfmv SudokuSolver.jar SudokuSolverLib/MANIFEST.txt SudokuSolverLib/*.class
