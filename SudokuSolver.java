@@ -138,19 +138,17 @@ public class SudokuSolver extends SwingWorker<Void, ArrayList<Integer>>{
 	@Override
 	protected void process(List<ArrayList<Integer>> args){
 		for(ArrayList<Integer> arg : args){
-			if(arg.get(2)==0){
-				textGrid[arg.get(1)][arg.get(0)].setText("");
-			}else{
-				textGrid[arg.get(1)][arg.get(0)].setText("" + arg.get(2));
-			}
 			switch(arg.get(3)){
 				case 1:
+					textGrid[arg.get(1)][arg.get(0)].setText("" + arg.get(2));
 					textGrid[arg.get(1)][arg.get(0)].setBackground(Color.GREEN);
 					break;
 				case 2:
+					textGrid[arg.get(1)][arg.get(0)].setText("" );
 					textGrid[arg.get(1)][arg.get(0)].setBackground(Color.RED);
 					break;
 				case 3:
+					textGrid[arg.get(1)][arg.get(0)].setText("");
 					textGrid[arg.get(1)][arg.get(0)].setBackground(Color.WHITE);
 					break;
 			}
